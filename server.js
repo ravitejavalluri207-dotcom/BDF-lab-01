@@ -2,7 +2,7 @@
 const express = require("express");
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 // Log each request and its status code
 app.use((req, res, next) => {
@@ -21,7 +21,8 @@ app.get("/", (req, res) => {
 app.get("/about", (req, res) => {
     res.status(200).json({
         name: "Valluri Ravi Teja",
-        section: "GENAI-2C"
+        registrationNumber: "252U1R9166",
+        section: "CSE GEN-AI 2C"
     });
 });
 
